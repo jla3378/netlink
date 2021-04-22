@@ -18,29 +18,102 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>OSBundleUsageDescription</key>
+	<string>Android/RNDIS tethering driver</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>driver</key>
+		<key>WirelessControllerDevice</key>
 		<dict>
-			<key>CFBundleIdentifier</key>
+			<key>IOUserServerName</key>
 			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 			<key>CFBundleIdentifierKernel</key>
-			<string>com.apple.kpi.iokit</string>
-			<key>IOClass</key>
-			<string>IOUserService</string>
-			<key>IOMatchCategory</key>
-			<string>com.apple.null.driver</string>
-			<key>IOProviderClass</key>
-			<string>IOUserResources</string>
+			<string>com.apple.iokit.IOSkywalkFamily</string>
 			<key>IOResourceMatch</key>
 			<string>IOKit</string>
 			<key>IOUserClass</key>
-			<string>driver</string>
+			<string>netlink</string>
+			<key>CFBundleIdentifier</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+			<key>IOClass</key>
+			<string>IOUserNetworkEthernet</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>bDeviceClass</key>
+			<integer>224</integer>
+			<key>bDeviceSubClass</key>
+			<integer>0</integer>
+			<key>bDeviceProtocol</key>
+			<integer>0</integer>
+		</dict>
+		<key>RNDISControlLinuxGadget</key>
+		<dict>
 			<key>IOUserServerName</key>
-			<string>com.apple.null.driver</string>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+			<key>CFBundleIdentifierKernel</key>
+			<string>com.apple.iokit.IOSkywalkFamily</string>
+			<key>IOResourceMatch</key>
+			<string>IOKit</string>
+			<key>IOUserClass</key>
+			<string>netlink</string>
+			<key>CFBundleIdentifier</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+			<key>IOClass</key>
+			<string>IOUserNetworkEthernet</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostInterface</string>
+			<key>bInterfaceClass</key>
+			<integer>2</integer>
+			<key>bInterfaceSubClass</key>
+			<integer>2</integer>
+			<key>bInterfaceProtocol</key>
+			<integer>255</integer>
+		</dict>
+		<key>RNDISControlMiscDeviceRoE</key>
+		<dict>
+			<key>IOUserServerName</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+			<key>CFBundleIdentifierKernel</key>
+			<string>com.apple.iokit.IOSkywalkFamily</string>
+			<key>IOResourceMatch</key>
+			<string>IOKit</string>
+			<key>IOUserClass</key>
+			<string>netlink</string>
+			<key>CFBundleIdentifier</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+			<key>IOClass</key>
+			<string>IOUserNetworkEthernet</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostInterface</string>
+			<key>bInterfaceClass</key>
+			<integer>239</integer>
+			<key>bInterfaceSubClass</key>
+			<integer>4</integer>
+			<key>bInterfaceProtocol</key>
+			<integer>1</integer>
+		</dict>
+		<key>RNDISControlStockAndroid</key>
+		<dict>
+			<key>IOUserServerName</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+			<key>CFBundleIdentifierKernel</key>
+			<string>com.apple.iokit.IOSkywalkFamily</string>
+			<key>IOResourceMatch</key>
+			<string>IOKit</string>
+			<key>IOUserClass</key>
+			<string>netlink</string>
+			<key>CFBundleIdentifier</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+			<key>IOClass</key>
+			<string>IOUserNetworkEthernet</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostInterface</string>
+			<key>bInterfaceClass</key>
+			<integer>224</integer>
+			<key>bInterfaceSubClass</key>
+			<integer>1</integer>
+			<key>bInterfaceProtocol</key>
+			<integer>3</integer>
 		</dict>
 	</dict>
-	<key>OSBundleUsageDescription</key>
-	<string></string>
 </dict>
 </plist>
