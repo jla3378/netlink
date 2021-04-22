@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EED376652632241B00EC5015 /* DriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED376642632241B00EC5015 /* DriverKit.framework */; };
+		EED376682632241B00EC5015 /* driver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EED376672632241B00EC5015 /* driver.cpp */; };
+		EED3766A2632241B00EC5015 /* driver.iig in Sources */ = {isa = PBXBuildFile; fileRef = EED376692632241B00EC5015 /* driver.iig */; };
+		EED3766F2632241B00EC5015 /* com.joojin.netlink.driver.dext in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = EED376622632241B00EC5015 /* com.joojin.netlink.driver.dext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EED376772632246E00EC5015 /* NetworkingDriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED376762632246E00EC5015 /* NetworkingDriverKit.framework */; };
+		EED376792632247200EC5015 /* USBDriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED376782632247200EC5015 /* USBDriverKit.framework */; };
+		EED37683263224CB00EC5015 /* driver.h in Headers */ = {isa = PBXBuildFile; fileRef = EED37682263224CB00EC5015 /* driver.h */; };
 		EEED34152632229300345F19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEED34142632229300345F19 /* AppDelegate.swift */; };
 		EEED34172632229300345F19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEED34162632229300345F19 /* ContentView.swift */; };
 		EEED34192632229300345F19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEED34182632229300345F19 /* Assets.xcassets */; };
@@ -14,7 +21,40 @@
 		EEED341F2632229300345F19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEED341D2632229300345F19 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EED3766D2632241B00EC5015 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEED34092632229300345F19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EED376612632241B00EC5015;
+			remoteInfo = driver;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EED376702632241B00EC5015 /* Embed System Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				EED3766F2632241B00EC5015 /* com.joojin.netlink.driver.dext in Embed System Extensions */,
+			);
+			name = "Embed System Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		EED376622632241B00EC5015 /* com.joojin.netlink.driver.dext */ = {isa = PBXFileReference; explicitFileType = "wrapper.driver-extension"; includeInIndex = 0; path = com.joojin.netlink.driver.dext; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED376642632241B00EC5015 /* DriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DriverKit.framework; path = System/Library/Frameworks/DriverKit.framework; sourceTree = SDKROOT; };
+		EED376672632241B00EC5015 /* driver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = driver.cpp; sourceTree = "<group>"; };
+		EED376692632241B00EC5015 /* driver.iig */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.iig; path = driver.iig; sourceTree = "<group>"; };
+		EED3766B2632241B00EC5015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EED3766C2632241B00EC5015 /* driver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = driver.entitlements; sourceTree = "<group>"; };
+		EED376762632246E00EC5015 /* NetworkingDriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkingDriverKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/DriverKit20.2.sdk/System/DriverKit/System/Library/Frameworks/NetworkingDriverKit.framework; sourceTree = DEVELOPER_DIR; };
+		EED376782632247200EC5015 /* USBDriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = USBDriverKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/DriverKit20.2.sdk/System/DriverKit/System/Library/Frameworks/USBDriverKit.framework; sourceTree = DEVELOPER_DIR; };
+		EED37682263224CB00EC5015 /* driver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = driver.h; sourceTree = "<group>"; };
 		EEED34112632229300345F19 /* netlink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = netlink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEED34142632229300345F19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEED34162632229300345F19 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,6 +66,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EED3765F2632241B00EC5015 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED376792632247200EC5015 /* USBDriverKit.framework in Frameworks */,
+				EED376772632246E00EC5015 /* NetworkingDriverKit.framework in Frameworks */,
+				EED376652632241B00EC5015 /* DriverKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EEED340E2632229300345F19 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -36,10 +86,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EED376632632241B00EC5015 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EED376782632247200EC5015 /* USBDriverKit.framework */,
+				EED376762632246E00EC5015 /* NetworkingDriverKit.framework */,
+				EED376642632241B00EC5015 /* DriverKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EED376662632241B00EC5015 /* driver */ = {
+			isa = PBXGroup;
+			children = (
+				EED376672632241B00EC5015 /* driver.cpp */,
+				EED376692632241B00EC5015 /* driver.iig */,
+				EED3766B2632241B00EC5015 /* Info.plist */,
+				EED3766C2632241B00EC5015 /* driver.entitlements */,
+				EED37682263224CB00EC5015 /* driver.h */,
+			);
+			path = driver;
+			sourceTree = "<group>";
+		};
 		EEED34082632229300345F19 = {
 			isa = PBXGroup;
 			children = (
 				EEED34132632229300345F19 /* netlink */,
+				EED376662632241B00EC5015 /* driver */,
+				EED376632632241B00EC5015 /* Frameworks */,
 				EEED34122632229300345F19 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				EEED34112632229300345F19 /* netlink.app */,
+				EED376622632241B00EC5015 /* com.joojin.netlink.driver.dext */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,7 +151,36 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		EED3765D2632241B00EC5015 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED37683263224CB00EC5015 /* driver.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		EED376612632241B00EC5015 /* driver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EED376732632241B00EC5015 /* Build configuration list for PBXNativeTarget "driver" */;
+			buildPhases = (
+				EED3765D2632241B00EC5015 /* Headers */,
+				EED3765E2632241B00EC5015 /* Sources */,
+				EED3765F2632241B00EC5015 /* Frameworks */,
+				EED376602632241B00EC5015 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = driver;
+			productName = driver;
+			productReference = EED376622632241B00EC5015 /* com.joojin.netlink.driver.dext */;
+			productType = "com.apple.product-type.driver-extension";
+		};
 		EEED34102632229300345F19 /* netlink */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEED34242632229300345F19 /* Build configuration list for PBXNativeTarget "netlink" */;
@@ -84,10 +188,12 @@
 				EEED340D2632229300345F19 /* Sources */,
 				EEED340E2632229300345F19 /* Frameworks */,
 				EEED340F2632229300345F19 /* Resources */,
+				EED376702632241B00EC5015 /* Embed System Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EED3766E2632241B00EC5015 /* PBXTargetDependency */,
 			);
 			name = netlink;
 			productName = netlink;
@@ -103,6 +209,9 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					EED376612632241B00EC5015 = {
+						CreatedOnToolsVersion = 12.4;
+					};
 					EEED34102632229300345F19 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -122,11 +231,19 @@
 			projectRoot = "";
 			targets = (
 				EEED34102632229300345F19 /* netlink */,
+				EED376612632241B00EC5015 /* driver */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EED376602632241B00EC5015 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EEED340F2632229300345F19 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -140,6 +257,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EED3765E2632241B00EC5015 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED376682632241B00EC5015 /* driver.cpp in Sources */,
+				EED3766A2632241B00EC5015 /* driver.iig in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EEED340D2632229300345F19 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -150,6 +276,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EED3766E2632241B00EC5015 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EED376612632241B00EC5015 /* driver */;
+			targetProxy = EED3766D2632241B00EC5015 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EEED341D2632229300345F19 /* Main.storyboard */ = {
@@ -163,6 +297,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EED376712632241B00EC5015 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = driver/driver.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8798JKH4Z8;
+				DRIVERKIT_DEPLOYMENT_TARGET = 20.2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/System/DriverKit/System/Library/Frameworks",
+				);
+				INFOPLIST_FILE = driver/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joojin.netlink.driver;
+				PRODUCT_NAME = "$(inherited)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = driverkit;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EED376722632241B00EC5015 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = driver/driver.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8798JKH4Z8;
+				DRIVERKIT_DEPLOYMENT_TARGET = 20.2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/System/DriverKit/System/Library/Frameworks",
+				);
+				INFOPLIST_FILE = driver/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joojin.netlink.driver;
+				PRODUCT_NAME = "$(inherited)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = driverkit;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		EEED34222632229300345F19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -284,7 +462,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = netlink/netlink.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"netlink/Preview Content\"";
 				DEVELOPMENT_TEAM = 8798JKH4Z8;
@@ -298,6 +477,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.joojin.netlink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -308,7 +488,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = netlink/netlink.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"netlink/Preview Content\"";
 				DEVELOPMENT_TEAM = 8798JKH4Z8;
@@ -322,6 +503,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.joojin.netlink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -329,6 +511,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EED376732632241B00EC5015 /* Build configuration list for PBXNativeTarget "driver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED376712632241B00EC5015 /* Debug */,
+				EED376722632241B00EC5015 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EEED340C2632229300345F19 /* Build configuration list for PBXProject "netlink" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
